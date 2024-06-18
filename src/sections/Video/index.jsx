@@ -35,11 +35,25 @@ const Video = () => {
 
     textElement.innerHTML += textElement.innerHTML;
 
-    gsap.fromTo(
-      textElement,
-      { x: 0 },
-      { x: -spanWidth, duration: 40, repeat: -1, ease: "none" }
-    );
+    let animationFrame = null;
+
+    const animateText = () => {
+      gsap.to(textElement, {
+        x: -spanWidth,
+        duration: 40,
+        ease: "none",
+        onComplete: () => {
+          gsap.set(textElement, { x: 0 });
+          animationFrame = requestAnimationFrame(animateText);
+        },
+      });
+    };
+
+    animateText();
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
 
   return (

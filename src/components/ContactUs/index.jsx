@@ -35,7 +35,7 @@ const ContactUs = () => {
   return (
     <motion.div
       className={style["contact-us-btn"]}
-      initial={{ opacity: 1, backgroundColor: "black", width: "49px" }}
+      initial={{ opacity: 0, backgroundColor: "black", width: "49px" }}
       animate={backgroundControls}
     >
       <Button svg={"/icons/mobile.svg"} rounded={true} />
