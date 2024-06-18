@@ -8,7 +8,7 @@
   align-items: center;
 
   @include media-breakpoint-down(xl) {
-    padding: 10px;
+    padding: 19px 5px;
   }
 
   @include media-breakpoint-up(xl) {

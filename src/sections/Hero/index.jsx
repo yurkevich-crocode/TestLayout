@@ -40,7 +40,7 @@ const Hero = () => {
               </motion.p>
               <Title
                 text={
-                  "Real Estate in \n Dubai: Ideal for \n Living and Investing"
+                  "Real Estate in Dubai:\n Ideal for Living and \n Investing"
                 }
                 h1={true}
               />

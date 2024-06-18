@@ -6,6 +6,7 @@
 
   @include media-breakpoint-down(xl) {
     min-height: 100vh;
+    height: 100vh;
   }
 
   @include media-breakpoint-up(xl) {
@@ -30,13 +31,17 @@
   }
 
   &__wrapper {
-    display: grid;
     height: 100%;
     @include media-breakpoint-down(xl) {
+      display: flex;
+      flex-direction: column;
       gap: 50px;
+      min-height: 100%;
     }
 
     @include media-breakpoint-up(xl) {
+      display: grid;
+
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -46,32 +51,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 45px;
-    padding-right: 45px;
+
     height: 100%;
     width: 100%;
 
     @include media-breakpoint-down(xl) {
       gap: 8px;
+      padding-top: 57px;
+      padding-bottom: 8px;
     }
 
     @include media-breakpoint-up(xl) {
       position: absolute;
+      padding-left: 45px;
+      padding-right: 45px;
     }
   }
 
   &__image-wrapper {
     position: relative;
     width: 100%;
-    border-radius: 30px;
     overflow: hidden;
     z-index: 2;
 
     @include media-breakpoint-down(xl) {
-      height: 429px;
+      border-radius: 16px;
+      height: 100%;
     }
 
     @include media-breakpoint-up(xl) {
+      border-radius: 30px;
       height: 100%;
     }
   }
@@ -93,19 +102,20 @@
   &__image-btn {
     position: absolute;
     background-color: #ffffff;
-    border-radius: 20px;
     cursor: pointer;
 
     @include media-breakpoint-down(xl) {
       right: 10px;
       bottom: 10px;
-      padding: 10px 15px;
+      padding: 10px;
+      border-radius: 10px;
     }
 
     @include media-breakpoint-up(xl) {
       right: 30px;
       bottom: 30px;
       padding: 16px 20px;
+      border-radius: 20px;
     }
   }
 
@@ -139,10 +149,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 17px 30px;
 
     @include media-breakpoint-down(xl) {
       justify-content: center;
+      padding-top: 17px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 17px 30px;
     }
   }
 }
