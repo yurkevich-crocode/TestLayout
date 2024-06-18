@@ -87,6 +87,7 @@ const Video = () => {
               autoPlay
               muted
               loop
+              playsinline
               className={style["video__src"]}
               style={{ scale, borderRadius }}
             >
