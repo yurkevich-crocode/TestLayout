@@ -98,9 +98,9 @@ const Video = () => {
               </p>
             </motion.div>
             <motion.video
-              autoPlay
-              muted
+              autoplay
               loop
+              muted
               playsinline
               className={style["video__src"]}
               style={{ scale, borderRadius }}
