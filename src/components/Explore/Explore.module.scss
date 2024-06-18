@@ -9,6 +9,10 @@
   align-items: center;
   gap: 15px;
 
+  @include media-breakpoint-up(xl) {
+    padding-right: 10px;
+  }
+
   > span {
     font-size: 14px;
     cursor: pointer;
