@@ -21,12 +21,7 @@
   }
 
   span {
-    @include media-breakpoint-down(xl) {
-      font-size: 16px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 18px;
-    }
+    white-space: nowrap;
+    font-size: 18px;
   }
 }

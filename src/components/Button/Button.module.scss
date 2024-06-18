@@ -9,13 +9,13 @@
   transition: background 0.3s ease;
 
   @include media-breakpoint-down(xl) {
-    width: 34px;
-    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
   }
 
   @include media-breakpoint-up(xl) {
-    width: 46px;
-    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
   }
 
   &--transparent {
@@ -25,8 +25,8 @@
 
   &--rounded {
     border-radius: 100%;
-    width: 34px;
-    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
   }
 
   &--black {
