@@ -9,4 +9,9 @@
   margin-right: auto;
   margin-left: auto;
   height: 100%;
+
+  &--full {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }

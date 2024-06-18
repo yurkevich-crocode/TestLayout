@@ -16,6 +16,7 @@ import gsap from "gsap";
 const Video = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["30px", "0px"]);
 
   const controls = useAnimation();
   const ref = useRef(null);
@@ -43,7 +44,7 @@ const Video = () => {
 
   return (
     <div className={style["video"]} ref={ref}>
-      <Container>
+      <Container size={"full"}>
         <div className={style["video__wrapper"]}>
           <motion.div
             className={style["video__btns"]}
@@ -62,10 +63,10 @@ const Video = () => {
             />
             <Button rounded={true} bg_color={"black"} svg={"/icons/key.svg"} />
           </motion.div>
-          <div className={style["video__item"]}>
+          <motion.div className={style["video__item"]}>
             <motion.div
               className={style["video__text-wrapper"]}
-              style={{ scale }}
+              style={{ scale, borderRadius }}
             >
               <p
                 ref={textRef}
@@ -87,11 +88,11 @@ const Video = () => {
               muted
               loop
               className={style["video__src"]}
-              style={{ scale }}
+              style={{ scale, borderRadius }}
             >
               <source src="/dubai.mp4" type="video/mp4" />
             </motion.video>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>
