@@ -1,9 +1,20 @@
+@import "@/globals.scss";
+
 .logo {
   &__image {
     position: relative;
-    width: 128px;
-    height: 44px;
+
     overflow: hidden;
+
+    @include media-breakpoint-down(xl) {
+      width: 86px;
+      height: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 128px;
+      height: 44px;
+    }
 
     img {
       position: absolute;

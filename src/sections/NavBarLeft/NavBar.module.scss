@@ -1,9 +1,19 @@
+@import "@/globals.scss";
+
 .nav-bar {
   position: relative;
   z-index: 2;
-  padding: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(xl) {
+    padding: 10px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 30px;
+  }
 
   &__btns {
     display: flex;

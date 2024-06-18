@@ -1,15 +1,34 @@
+@import "@/globals.scss";
+
 .button {
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+
   background-color: #f6f6f6;
   border: none;
   border-radius: 8px;
   transition: background 0.3s ease;
 
+  @include media-breakpoint-down(xl) {
+    width: 34px;
+    height: 34px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 46px;
+    height: 46px;
+  }
+
   &--transparent {
     background-color: #c2c2c200;
     border: 1px solid #f6f6f6;
+  }
+
+  &--rounded {
+    border-radius: 100%;
+  }
+
+  &--black {
+    background-color: black;
   }
 
   &:hover {

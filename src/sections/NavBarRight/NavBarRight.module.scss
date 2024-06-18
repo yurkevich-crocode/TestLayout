@@ -1,16 +1,33 @@
+@import "@/globals.scss";
+
 .nav-bar-right {
   position: absolute;
   z-index: 3;
-  padding: 30px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0);
 
+  @include media-breakpoint-down(xl) {
+    padding: 10px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 30px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    justify-content: flex-end;
+  }
+
   &__links {
     display: flex;
     align-items: center;
     gap: 57px;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
 
     p {
       cursor: pointer;

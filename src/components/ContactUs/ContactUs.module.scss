@@ -1,0 +1,22 @@
+@import "@/globals.scss";
+
+.contact-us-btn {
+  display: flex;
+  cursor: pointer;
+  background-color: black;
+  width: max-content;
+  color: white;
+  align-items: center;
+  border-radius: 80px;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+
+  @include media-breakpoint-down(xl) {
+    padding: 3px 15px 3px 3px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 8px 20px 8px 8px;
+  }
+}

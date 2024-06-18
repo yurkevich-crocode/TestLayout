@@ -1,7 +1,16 @@
+@import "@/globals.scss";
+
 .title {
-  font-size: 56px;
   font-weight: 400;
   text-align: center;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 36px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 56px;
+  }
 
   &--center {
     text-align: center;

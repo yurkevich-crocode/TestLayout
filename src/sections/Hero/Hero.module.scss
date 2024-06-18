@@ -1,27 +1,48 @@
+@import "@/globals.scss";
+
 .hero {
-  height: 100vh;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  @include media-breakpoint-down(xl) {
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 100vh;
+  }
 
   &__leftside {
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: space-between;
   }
 
   &__subtitle {
-    font-size: 18px;
+    @include media-breakpoint-down(xl) {
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
   }
 
   &__wrapper {
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    @include media-breakpoint-down(xl) {
+      gap: 50px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
   }
 
   &__title-wrapper {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,15 +50,31 @@
     padding-left: 45px;
     padding-right: 45px;
     height: 100%;
+    width: 100%;
+
+    @include media-breakpoint-down(xl) {
+      gap: 8px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+    }
   }
 
   &__image-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
     border-radius: 30px;
     overflow: hidden;
     z-index: 2;
+
+    @include media-breakpoint-down(xl) {
+      height: 429px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 100%;
+    }
   }
 
   &__image {
@@ -57,15 +94,30 @@
   &__image-btn {
     position: absolute;
     background-color: #ffffff;
-    padding: 16px 20px;
     border-radius: 20px;
-    bottom: 30px;
     cursor: pointer;
-    right: 30px;
+
+    @include media-breakpoint-down(xl) {
+      right: 10px;
+      bottom: 10px;
+      padding: 10px 15px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      right: 30px;
+      bottom: 30px;
+      padding: 16px 20px;
+    }
   }
 
   &__image-text {
-    font-size: 18px;
+    @include media-breakpoint-down(xl) {
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
   }
 
   &__btn-wrapper {
@@ -82,5 +134,16 @@
     justify-content: center;
     border-radius: 100%;
     background-color: #f6f6f6;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 30px;
+
+    @include media-breakpoint-down(xl) {
+      justify-content: center;
+    }
   }
 }
