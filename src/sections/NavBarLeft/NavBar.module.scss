@@ -1,0 +1,13 @@
+.nav-bar {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

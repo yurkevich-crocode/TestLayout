@@ -1,0 +1,14 @@
+.logo {
+  &__image {
+    position: relative;
+    width: 128px;
+    height: 44px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
