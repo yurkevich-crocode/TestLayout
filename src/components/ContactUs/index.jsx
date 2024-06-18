@@ -10,11 +10,14 @@ const ContactUs = () => {
   const textControls = useAnimation();
 
   useEffect(() => {
+    const width = window.innerWidth;
+    const targetWidth = width <= 1200 ? "171px" : "196px"; // Установка ширины на основе ширины экрана
+
     const sequence = async () => {
       await backgroundControls.start({
         opacity: 1,
         backgroundColor: "black",
-        width: ["49px", "196px"],
+        width: ["49px", targetWidth],
         transition: { duration: 1, ease: "easeInOut" },
       });
 
