@@ -98,14 +98,14 @@ const Video = () => {
               </p>
             </motion.div>
             <motion.video
+              playsinline
               autoplay
               loop
               muted
-              playsinline
               className={style["video__src"]}
               style={{ scale, borderRadius }}
             >
-              <source src="/dubai.mp4" type="video/mp4" />
+              <source src="/video/dubai.mp4" type="video/mp4" />
             </motion.video>
           </motion.div>
         </div>
